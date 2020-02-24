@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Akanksha Choudhary</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.05em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="58fc726d-b159-4820-9fe1-0e0154038213" class="page sans"><header><h1 class="page-title">Akanksha Choudhary</h1></header><div class="page-body"><div id="9692078a-cc99-4c46-9be5-87f7d368e4ae" class="column-list"><div id="9c714a3e-b0d5-45b6-8679-543a52527509" style="width:50%" class="column"><h2 id="a4110918-a3f0-4f1f-a0c1-279abeb71121" class="">Personal Details</h2><hr id="e17a70c8-8cd9-40eb-9559-afba64d29318"/><figure id="a23e128a-84ee-44be-99e0-4493540e63a2" class="link-to-page"> <a style="text-decoration:none" 23-Nov-1995-a23e128a84ee44be99e04493540e63a2"><img class="icon" src="Akanksha%20Choudhary/23%20Nov%201995/cake_(1).png"/>23 Nov, 1995</a></figure><figure id="140571e3-1929-4d59-9367-aa08d5866a6c" class="link-to-page"> <a style="text-decoration:none" 5-6-140571e319294d599367aa08d5866a6c"><img class="icon" src="Akanksha%20Choudhary/5%206/height-limit.png"/>5&#x27; 6&#x27;&#x27;</a></figure><figure id="a405c1d5-3fea-4ef5-b105-357f04e23432" class="link-to-page"> <a style="text-decoration:none" Jaipur-a405c1d53fea4ef5b105357f04e23432"><img class="icon" src="Akanksha%20Choudhary/Jaipur/hawa-mahal.png"/>Jaipur</a></figure><h2 id="6a78ac64-e968-4b14-955e-e5e24539542b" class="">Family Roots</h2><hr id="0a1323ed-c7bc-4244-9f19-546c4245dba3"/><figure id="e6a4d0e9-ec74-45c6-a4f5-00b1c5792960" class="link-to-page"> <a style="text-decoration:none" Agarwal-Bansal-Gotra-e6a4d0e9ec7445c6a4f500b1c5792960"><img class="icon" src="Akanksha%20Choudhary/Agarwal%20Bansal%20Gotra/swastika_(1).png"/>Agarwal - Bansal Gotra</a></figure><figure id="44d75209-1257-4baf-a8be-4a7fa7934bf4" class="link-to-page"> <a style="text-decoration:none" Shekhawati-Khetri-Rajasthan-44d7520912574bafa8be4a7fa7934bf4"><img class="icon" src="Akanksha%20Choudhary/Shekhawati%20Khetri%20Rajasthan/gps.png"/>Shekhawati, Khetri, Rajasthan</a></figure><h2 id="19b3269d-6218-43ea-9a00-bc7a995e5909" class="">Family Details</h2><hr id="65ffb320-3148-419f-87c2-90b2f7cc73c6"/><h3 id="9c7f5539-4c25-44ee-bcc2-a6fc81a9eb66" class="">Grand Parents</h3><figure id="96465bb9-0b3e-4d15-a8dc-b204d3904c4f" class="link-to-page"> <a style="text-decoration:none" Shri-Satyanaryan-Choudhary-96465bb90b3e4d15a8dcb204d3904c4f"><img class="icon" src="Akanksha%20Choudhary/Shri%20Satyanaryan%20Choudhary/elder.png"/>Shri Satyanaryan Choudhary</a></figure><figure id="3bc6d944-1577-48e0-a50a-c18ff6b135da" class="link-to-page"> <a style="text-decoration:none" 9351994240-3bc6d944157748e0a50ac18ff6b135da"><img class="icon" src="Akanksha%20Choudhary/9351994240/telephone.png"/>9351994240</a></figure><h3 id="d7071c1f-f713-44f7-ae11-0d599ed3b4bd" class="">Father</h3><figure id="a8210ac9-7972-4cdd-b5de-68b28e401715" class="link-to-page"> <a style="text-decoration:none" Lalit-Kumar-Choudhary-a8210ac979724cddb5de68b28e401715"><img class="icon" src="Akanksha%20Choudhary/Lalit%20Kumar%20Choudhary/father.png"/>Lalit Kumar Choudhary</a></figure><figure id="59a345ca-17d7-406b-a5bc-98741d0a7c89" class="link-to-page"> <a style="text-decoration:none" 9829262893-59a345ca17d7406ba5bc98741d0a7c89"><img class="icon" src="Akanksha%20Choudhary/9829262893/telephone.png"/>9829262893</a></figure><p id="859ef8fe-5388-4e8c-8dd9-7fea6eb51ef5" class=""><strong>Businessman</strong><div class="indented"><figure id="fb4ec975-2f82-45b7-b301-9658937220b3" class="link-to-page"> <a style="text-decoration:none" Shri-Ambika-Industries-fb4ec9752f8245b7b3019658937220b3"><img class="icon" src="Akanksha%20Choudhary/Shri%20Ambika%20Industries/factory_copy.png"/>Shri Ambika Industries</a></figure><figure id="720c6b41-4dc7-4bca-ada5-22449b5efe14" class="link-to-page"> <a style="text-decoration:none" Road-No-9A-VKIA-Jaipur-720c6b414dc74bcaada522449b5efe14"><img class="icon" src="Akanksha%20Choudhary/Road%20No%209A%20VKIA%20Jaipur/gps.png"/>Road No. 9A, VKIA, Jaipur</a></figure></div></p><h3 id="13f57294-5a1a-4566-9733-64fc18f1ffc6" class="">Brother</h3><figure id="8402a4ca-b83c-4c07-a283-65cae6f99ab1" class="link-to-page"> <a style="text-decoration:none" Nitin-Choudhary-8402a4cab83c4c07a28365cae6f99ab1"><img class="icon" src="Akanksha%20Choudhary/Nitin%20Choudhary/nerd.png"/>Nitin Choudhary</a></figure><p id="45a4bb65-7135-4e89-a6eb-ce2427f5d3a3" class=""><strong>App Developer</strong><div class="indented"><figure id="f34ccb63-b6c2-43bb-ab81-cef4e0690bfc" class="link-to-page"> <a style="text-decoration:none" B-Tech-Computer-Science-f34ccb63b6c243bbab81cef4e0690bfc"><img class="icon" src="Akanksha%20Choudhary/B%20Tech%20Computer%20Science/university.png"/>B.Tech Computer Science</a></figure></div></p><h3 id="2ec9e211-645b-428a-9936-00798b823618" class="">Tauji</h3><figure id="47647b62-95b9-4a79-af37-6129b485be78" class="link-to-page"> <a style="text-decoration:none" Shri-Sushil-Kumar-Choudhary-47647b6295b94a79af376129b485be78"><img class="icon" src="Akanksha%20Choudhary/Shri%20Sushil%20Kumar%20Choudhary/man.png"/>Shri Sushil Kumar Choudhary</a></figure><figure id="d3953dc9-1def-4f3e-9f9e-fcb596d8330b" class="link-to-page"> <a style="text-decoration:none" 9414236872-d3953dc91def4f3e9f9efcb596d8330b"><img class="icon" src="Akanksha%20Choudhary/9414236872/telephone.png"/>9414236872</a></figure><p id="ea76224d-b9bd-4db9-8cd7-27b22f7ef60c" class=""><strong>Businessman</strong><div class="indented"><figure id="f5789d32-02ee-44ab-b2cc-2f88f40566b9" class="link-to-page"> <a style="text-decoration:none" Natraj-Plastics-f5789d3202ee44abb2cc2f88f40566b9"><img class="icon" src="Akanksha%20Choudhary/Natraj%20Plastics/factory_copy.png"/>Natraj Plastics</a></figure><figure id="dff22778-31b9-4b83-a059-fff522feef96" class="link-to-page"> <a style="text-decoration:none" Road-No-14-VKIA-Jaipur-dff2277831b94b83a059fff522feef96"><img class="icon" src="Akanksha%20Choudhary/Road%20No%2014%20VKIA%20Jaipur/gps.png"/>Road No. 14, VKIA, Jaipur</a></figure></div></p><h3 id="65ca4aff-b967-4ae4-ad13-f6161ed76f1c" class="">Brother</h3><figure id="1f71d0e4-51e1-4f83-9bd0-1133eee63d8f" class="link-to-page"> <a style="text-decoration:none" Vinay-Choudhary-1f71d0e451e14f839bd01133eee63d8f"><img class="icon" src="Akanksha%20Choudhary/Vinay%20Choudhary/boy.png"/>Vinay Choudhary</a></figure><p id="f36d9de2-8173-4a13-9641-64d1d45363bb" class=""><strong>Pursuing CA</strong><div class="indented"><figure id="33cc768f-2ad6-45e7-a47b-164498d997d9" class="link-to-page"> <a style="text-decoration:none" B-Com-Commerce-College-33cc768f2ad645e7a47b164498d997d9"><img class="icon" src="Akanksha%20Choudhary/B%20Com%20Commerce%20College/university.png"/>B.Com Commerce College</a></figure></div></p><h2 id="3db8ccea-1ef2-4e64-96af-838ce97694ce" class="">Maternal Family Details</h2><hr id="19a3d6c8-90f5-4824-b662-41efb451b2c9"/><figure id="944ac646-e341-473c-9d0f-0640246841a4" class="link-to-page"> <a style="text-decoration:none" Shri-Damodar-Prasad-Goyal-944ac646e341473c9d0f0640246841a4"><img class="icon" src="Akanksha%20Choudhary/Shri%20Damodar%20Prasad%20Goyal/elder.png"/>Shri Damodar Prasad Goyal</a></figure><p id="e693d4be-a890-4ec2-9b7e-7d5b28065158" class=""><strong>Bade Mamaji</strong><div class="indented"><p id="679849b6-94c8-400a-b2f1-d3eedeb7c2dc" class=""><strong>President</strong></p><figure id="10461ae4-0d2c-4ab0-b021-649932ed7865" class="link-to-page"> <a style="text-decoration:none" National-Federation-of-Schools-10461ae40d2c4ab0b021649932ed7865"><img class="icon" src="Akanksha%20Choudhary/National%20Federation%20of%20Schools/school.png"/>National Federation of Schools</a></figure><figure id="fc07c8f8-7826-493e-ac6a-5aed679b81fa" class="link-to-page"> <a style="text-decoration:none" Education-Consultant-fc07c8f87826493eac6a5aed679b81fa"><img class="icon" src="Akanksha%20Choudhary/Education%20Consultant/professor_(1).png"/>Education Consultant</a></figure></div></p><figure id="67d17b77-ada9-46c8-8d73-cadaa9884f9b" class="link-to-page"> <a style="text-decoration:none" Shri-Rajendra-Goyal-67d17b77ada946c88d73cadaa9884f9b"><img class="icon" src="Akanksha%20Choudhary/Shri%20Rajendra%20Goyal/man.png"/>Shri Rajendra Goyal</a></figure><p id="4dbef867-c4d6-4f07-8ba5-b9031c682f27" class=""><strong>Mamaji</strong><div class="indented"><p id="1f77029b-9720-4b84-b643-ffd91fbb0cb0" class=""><strong>Businessman</strong><div class="indented"><figure id="11dcf267-e56a-4c51-8a57-3edac2bfac8e" class="link-to-page"> <a style="text-decoration:none" Broking-Commission-Agent-11dcf267e56a4c518a573edac2bfac8e"><img class="icon" src="Akanksha%20Choudhary/Broking%20Commission%20Agent/town.png"/>Broking &amp; Commission Agent</a></figure><figure id="e89da31a-382c-41d6-a238-efb640bf8e46" class="link-to-page"> <a style="text-decoration:none" New-Delhi-e89da31a382c41d6a238efb640bf8e46"><img class="icon" src="Akanksha%20Choudhary/New%20Delhi/new-delhi.png"/>New Delhi</a></figure></div></p></div></p><h2 id="3b7ba1c6-113e-4809-897a-4e3d2d761a52" class="">Address</h2><hr id="35e808d3-8537-4163-9934-97cfa70c4c2f"/><figure id="3ba154d3-04cf-444a-ba8e-d858c774a8e3" class="link-to-page"> <a style="text-decoration:none" 1-445-Vidyadhar-Nagar-3ba154d304cf444aba8ed858c774a8e3"><img class="icon" src="Akanksha%20Choudhary/1%20445%20Vidyadhar%20Nagar/house.png"/>1/445, Vidyadhar Nagar</a></figure><figure id="f21ddacb-707f-45c8-bf14-e506543c5e7b" class="link-to-page"> <a style="text-decoration:none" Jaipur-f21ddacb707f45c8bf14e506543c5e7b"><img class="icon" src="Akanksha%20Choudhary/Jaipur%201/hawa-mahal.png"/>Jaipur</a></figure></div><div id="899a96e6-731b-4df2-a9f1-851d8a8344f9" style="width:50%" class="column"><h2 id="427b3982-39f8-4d01-9de0-1265256c965e" class="">Academics</h2><hr id="ac5bdbc8-288d-4af4-9e2a-5399fd153994"/><figure id="03b55f31-c1c4-4eb1-b3bd-ecd8d097d884" class="link-to-page"> <a style="text-decoration:none" BBA-Biyani-Girls-College-03b55f31c1c44eb1b3bdecd8d097d884"><img class="icon" src="Akanksha%20Choudhary/BBA%20Biyani%20Girls%20College/university.png"/>BBA - Biyani Girls College</a></figure><figure id="038f61b2-2bed-40dc-a07e-2c57891c3005" class="link-to-page"> <a style="text-decoration:none" Maheshwari-Girls-Public-School-038f61b22bed40dca07e2c57891c3005"><img class="icon" src="Akanksha%20Choudhary/Maheshwari%20Girls%20Public%20School/book.png"/>Maheshwari Girls Public School</a></figure><figure id="70eab1d1-0df2-4dbc-ab4d-565f4bf7efcb" class="link-to-page"> <a style="text-decoration:none" 70eab1d10df24dbcab4d565f4bf7efcb"><img class="icon" src="Akanksha%20Choudhary/Untitled/blank.png"/> </a></figure><h2 id="09d5bc19-3ccd-412f-8e09-7b3b2c8337b6" class="">Hobbies</h2><hr id="74f5a4a6-4dc3-4ff0-aef6-2c3cd9fdfdf7"/><figure id="9c6fb913-ad11-4b5f-83c1-ce9ab137c809" class="link-to-page"> <a style="text-decoration:none" Art-Craft-9c6fb913ad114b5f83c1ce9ab137c809"><img class="icon" src="Akanksha%20Choudhary/Art%20Craft/paint.png"/>Art &amp; Craft</a></figure><figure id="aa2cc1cc-68f3-43b5-8c91-64ed9481d6a6" class="link-to-page"> <a style="text-decoration:none" Cooking-aa2cc1cc68f343b58c9164ed9481d6a6"><img class="icon" src="Akanksha%20Choudhary/Cooking/spatula.png"/>Cooking</a></figure><h2 id="e86a33d1-19ac-4b02-86d5-5138a4caabb0" class=""> </h2><hr id="ec239ac0-f518-46ff-b068-6a2497a9f18d"/><h3 id="4c010e6b-ecf5-4ab1-8656-c845cb91c6f0" class=""> </h3><figure id="756af543-40cc-4f12-8cfc-bcc5994cd41f" class="link-to-page"> <a style="text-decoration:none" Smt-Sharda-Devi-Choudhary-756af54340cc4f128cfcbcc5994cd41f"><img class="icon" src="Akanksha%20Choudhary/Smt%20Sharda%20Devi%20Choudhary/woman_(1).png"/>Smt. Sharda Devi Choudhary</a></figure><figure id="cb530f78-34d2-451e-b126-f45c49136292" class="link-to-page"> <a style="text-decoration:none" cb530f7834d2451eb126f45c49136292"><img class="icon" src="Akanksha%20Choudhary/Untitled%201/blank.png"/> </a></figure><h3 id="d4ee8b97-4fce-44d2-bd2b-baf3ab8fe36d" class="">Mother</h3><figure id="71b784d8-ef13-4221-8500-05031b003580" class="link-to-page"> <a style="text-decoration:none" Asha-Choudhary-71b784d8ef134221850005031b003580"><img class="icon" src="Akanksha%20Choudhary/Asha%20Choudhary/mother.png"/>Asha Choudhary</a></figure><p id="a3ed94a7-669c-4d74-91a9-5aae7dbd3f72" class=""><strong>Housewife</strong></p><figure id="b8260295-cba5-4477-9ef9-3f2362e5094b" class="link-to-page"> <a style="text-decoration:none" b8260295cba544779ef93f2362e5094b"><img class="icon" src="Akanksha%20Choudhary/Untitled%202/blank.png"/> </a></figure><figure id="f866603f-a8e2-43bc-b37d-5735ad43259c" class="link-to-page"> <a style="text-decoration:none" f866603fa8e243bcb37d5735ad43259c"><img class="icon" src="Akanksha%20Choudhary/Untitled%202/blank.png"/>  </a></figure><figure id="d4f6537c-bac5-4717-b4ec-062734df4d15" class="link-to-page"> <a style="text-decoration:none" d4f6537cbac54717b4ec062734df4d15"><img class="icon" src="Akanksha%20Choudhary/Untitled%203/blank.png"/> </a></figure><h3 id="44d9f19c-01d9-4ca9-a4c2-f8fbf95ed01a" class=""> </h3><figure id="adce8f92-f768-4a2c-afae-596698cc56ca" class="link-to-page"> <a style="text-decoration:none" adce8f92f7684a2cafae596698cc56ca"><img class="icon" src="Akanksha%20Choudhary/Untitled%204/blank.png"/>  </a></figure><p id="d24a157f-62be-4571-a333-712a636f3d28" class=""> <div class="indented"><figure id="3e79cb83-2a01-4b6a-8419-a68878141d95" class="link-to-page"> <a style="text-decoration:none" 3e79cb832a014b6a8419a68878141d95"><img class="icon" src="Akanksha%20Choudhary/Untitled%205/blank.png"/> </a></figure></div></p><h3 id="861fa60d-cc3b-4397-803e-3c189643dcc3" class="">Taiji</h3><figure id="2cadf5bf-b620-4253-a45a-0312fd43c3d8" class="link-to-page"> <a style="text-decoration:none" Smt-Manju-Choudhary-2cadf5bfb6204253a45a0312fd43c3d8"><img class="icon" src="Akanksha%20Choudhary/Smt%20Manju%20Choudhary/woman_(2).png"/>Smt. Manju Choudhary</a></figure><p id="95cee927-9bca-4e37-b0b3-793da1efa278" class=""><strong>Housewife</strong></p><figure id="4ad791eb-a912-4a25-9f6b-eb2ed78b418c" class="link-to-page"> <a style="text-decoration:none" 4ad791eba9124a259f6beb2ed78b418c"><img class="icon" src="Akanksha%20Choudhary/Untitled%205/blank.png"/>  </a></figure><figure id="0c0b642f-ce6f-4680-81b1-a18af766f7a9" class="link-to-page"> <a style="text-decoration:none" 0c0b642fce6f468081b1a18af766f7a9"><img class="icon" src="Akanksha%20Choudhary/Untitled%205/blank.png"/>   </a></figure><figure id="a8478f72-7e20-4572-b871-c5d75b4126fc" class="link-to-page"> <a style="text-decoration:none" a8478f727e204572b871c5d75b4126fc"><img class="icon" src="Akanksha%20Choudhary/Untitled%205/blank.png"/>  </a></figure><h3 id="f465df00-7c52-4e5c-b6f5-5ff09359a250" class=""> </h3><figure id="c431f929-b3bd-452f-904d-dd7994b45f23" class="link-to-page"> <a style="text-decoration:none" c431f929b3bd452f904ddd7994b45f23"><img class="icon" src="Akanksha%20Choudhary/Untitled%205/blank.png"/>  </a></figure><p id="3590dc74-615f-4210-9a6d-18a4bb5d00ac" class=""> </p><figure id="21a1393e-7e5c-4dce-8df0-6ad64908189d" class="link-to-page"> <a style="text-decoration:none" 21a1393e7e5c4dce8df06ad64908189d"><img class="icon" src="Akanksha%20Choudhary/Untitled%205/blank.png"/>  </a></figure><h2 id="11575db3-253c-41fc-8736-85fb571cc9ab" class=""> </h2><hr id="4615d037-64e0-4fa5-9d62-108dd8202760"/><figure id="4c6e853b-add5-4f67-8566-7ba8f0230308" class="link-to-page"> <a style="text-decoration:none" Shri-Sunil-Goyal-4c6e853badd54f6785667ba8f0230308"><img class="icon" src="Akanksha%20Choudhary/Shri%20Sunil%20Goyal/man.png"/>Shri Sunil Goyal</a></figure><p id="a9824ed2-963e-4dfd-949c-986b632f65eb" class=""><strong>Mamaji</strong><div class="indented"><p id="c3732385-06f0-4d39-95ed-d3aed4dd4219" class=""><strong>Businessman</strong><div class="indented"><figure id="da36ab68-bff7-496e-b1be-2e90da06e305" class="link-to-page"> <a style="text-decoration:none" Shri-Ambika-Trading-Agency-da36ab68bff7496eb1be2e90da06e305"><img class="icon" src="Akanksha%20Choudhary/Shri%20Ambika%20Trading%20Agency/town.png"/>Shri Ambika Trading Agency</a></figure><figure id="dd133c85-3e3d-4b80-bcfc-695d3b102fba" class="link-to-page"> <a style="text-decoration:none" Jaipur-dd133c853e3d4b80bcfc695d3b102fba"><img class="icon" src="Akanksha%20Choudhary/Jaipur%202/hawa-mahal.png"/>Jaipur</a></figure></div></p></div></p><figure id="027b0eee-c6d1-40a0-9515-d6186563473c" class="link-to-page"> <a style="text-decoration:none" Shri-Sirmore-Goyal-027b0eeec6d140a09515d6186563473c"><img class="icon" src="Akanksha%20Choudhary/Shri%20Sirmore%20Goyal/man.png"/>Shri Sirmore Goyal</a></figure><p id="54e159d5-46c2-48f3-b767-44c6f462dcbe" class=""><strong>Mamaji</strong><div class="indented"><p id="af7cc45e-39d0-4192-b778-332133ddf61e" class=""><strong>Businessman</strong><div class="indented"><figure id="6602f64a-b5fd-4ec3-92d7-ed99374e611d" class="link-to-page"> <a style="text-decoration:none" Broking-Commission-Agent-6602f64ab5fd4ec392d7ed99374e611d"><img class="icon" src="Akanksha%20Choudhary/Broking%20Commission%20Agent%201/town.png"/>Broking &amp; Commission Agent</a></figure><figure id="04098158-73eb-4e0a-91db-e5550f530fd1" class="link-to-page"> <a style="text-decoration:none" Guntur-Andhra-Pradesh-0409815873eb4e0a91dbe5550f530fd1"><img class="icon" src="Akanksha%20Choudhary/Guntur%20Andhra%20Pradesh/india.png"/>Guntur, Andhra Pradesh</a></figure></div></p></div></p><h2 id="6c5af16d-c74c-471c-9c9a-31d8ee0899a8" class=""> </h2><hr id="ec7312e7-d5c8-4934-930d-0bcf64e1bd95"/></div></div></div></article></body></html>
